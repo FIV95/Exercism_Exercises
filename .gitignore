@@ -1,0 +1,9 @@
+# Rust build artifacts
+/target/
+
+# Editor/IDE files
+**/.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
