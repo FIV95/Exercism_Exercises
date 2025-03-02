@@ -1,9 +1,12 @@
-pub fn square(s: u32) -> u64 {
-    todo!("grains of rice on square {s}");
+pub fn square(s: u32) -> u128 {
+    if s <= 64 {
+    return 2_u128.pow(s-1) as u128;
+    }
+    panic!()
 }
 
-pub fn total() -> u64 {
-    todo!();
+pub fn total() -> u128 {
+    (1..=64).map(square).sum()
 }
 
 /*
@@ -33,6 +36,7 @@ Write code that calculates:
 //  9           256
 //  10          512
 //
-//  so with 64 max tiles we can have a max number of grains: 
+//  so with 64 max tiles we can have a max number of grains: 9_223_372_036_854_775_808
+//  the formula is grains = 2^n-1
 //
 */
